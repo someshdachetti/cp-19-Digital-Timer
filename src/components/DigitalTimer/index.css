@@ -1,0 +1,78 @@
+/* Write your CSS here */
+.bg-color {
+  background-image: linear-gradient (to, right white, #cffcf1);
+  height: 100vh;
+}
+.h {
+  text-align: center;
+}
+.xx {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bg-img {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+
+  height: 100vh;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
+.white-clock {
+  height: 200px;
+  width: 200px;
+  border-radius: 56px;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
+.start-reset-imgs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 10px;
+}
+img {
+  height: 23px;
+  width: 23px;
+  margin: 10px;
+}
+.start {
+  color: black;
+  font-family: 'Lucida Sans Regular';
+  font-size: 13px;
+  text-align: right;
+}
+.qq {
+  color: black;
+  background-color: cyan;
+  border-radius: 7px;
+  height: 37px;
+  text-align: center;
+  width: 66px;
+  margin: 15px;
+}
+.Buttons {
+  display: flex;
+  flex-direction: row;
+}
+.zz {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 23px;
+}
+button {
+  height: 23px;
+  width: 66px;
+}
