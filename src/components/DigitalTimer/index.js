@@ -9,6 +9,7 @@ class DigitalTimer extends Component {
     text: 25,
     seconds: 59,
     reset: 25,
+    xxx: '',
   }
 
   componentDidMount = () => {
@@ -16,8 +17,15 @@ class DigitalTimer extends Component {
   }
 
   timer = () => {
+    const {seconds, text} = this.state
+
     this.setState({Timer: new Date()})
     this.setState(prevState => ({seconds: prevState.seconds - 1}))
+    if (seconds < 0) {
+      this.setState(prevState => ({text: prevState.text - 1, seconds: 59}))
+    }
+    const xxx = seconds < 10 ? 0 : seconds
+    this.setState({xxx})
   }
 
   letStartTime = () => {
@@ -39,7 +47,7 @@ class DigitalTimer extends Component {
   }
 
   render() {
-    const {Timer, seconds, stopTime, text, reset} = this.state
+    const {Timer, seconds, stopTime, text, reset, xxx} = this.state
 
     const letStop = stopTime
       ? 'https://assets.ccbp.in/frontend/react-js/play-icon-img.png'
@@ -56,7 +64,7 @@ class DigitalTimer extends Component {
           <div className="bg-img">
             <div className="white-clock">
               <h1>
-                {text}:{seconds}
+                {text}:{xxx < 10 ? `0${xxx}` : xxx}
               </h1>
               <p>{xx}</p>
             </div>
